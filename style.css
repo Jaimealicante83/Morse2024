@@ -20,22 +20,30 @@ body {
 
 .container {
   display: flex;
-  max-width: 120rem;
+  flex-direction: column;
+  max-width: 100%;
   width: auto;
-  margin: 7rem auto auto;
+  margin: 1rem auto auto;
   padding: 2rem;
   text-align: left;
-  gap: 5rem;
+  gap: 2rem;
 }
-@media screen and (min-width: 99.3rem) {
+@media screen and (min-width: 993px) {
   .container {
     flex-direction: row;
-    gap: 2rem;
+    gap: 10rem;
+    max-width: 120rem;
+    margin: 7rem auto auto;
   }
 }
 
 .box-titulo {
-  width: 30%;
+  width: 100%;
+}
+@media screen and (min-width: 993px) {
+  .box-titulo {
+    width: 30%;
+  }
 }
 .box-titulo h1 {
   font-family: "Roboto Mono", serif;
@@ -54,7 +62,12 @@ body {
 }
 
 .box-traductor {
-  width: 70%;
+  width: 100%;
+}
+@media screen and (min-width: 993px) {
+  .box-traductor {
+    width: 70%;
+  }
 }
 .box-traductor .translator {
   display: flex;
@@ -102,16 +115,31 @@ body {
 .box-traductor .translator button:hover {
   background: #84c100;
 }
+.box-traductor .translator .output-section .morse-output {
+  width: 100%;
+  min-height: 10rem;
+  margin-bottom: 1rem;
+  border: 0.1rem solid #555;
+  border-radius: 0.3125rem;
+  padding: 1rem;
+  font-size: 1.6rem;
+  background: #444;
+  color: #ffffff;
+  font-family: "Open Sans", serif;
+  line-height: 2.4rem;
+}
 .box-traductor .translator .output-section .morse-char {
   display: inline-block;
-  margin: 0 5px;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 0.2rem 0.5rem;
+  margin: 0 0.2rem;
+  border-radius: 0.3rem;
+  transition: background-color 0.3s ease;
+  min-width: 1.2rem;
+  text-align: center;
 }
 .box-traductor .translator .output-section .morse-char.highlight {
-  color: #fff;
   background-color: #A2EC00;
-  padding: 2px 5px;
-  border-radius: 3px;
+  color: #000;
 }
 .box-traductor .translator .output-section .buttons {
   display: flex;
