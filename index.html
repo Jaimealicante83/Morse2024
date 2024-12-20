@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traductor de Código Morse</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="box-titulo">
+      <h1>TRADUCTOR DE <span class="highlight">CÓDIGO MORSE</span></h1>
+      <p>Escribe el texto que deseas traducir y obtendrás su versión en código Morse, tanto en formato escrito como en audio. Además, podrás guardar tus mensajes favoritos para acceder a ellos fácilmente cuando los necesites.</p>
+    </div>
+
+    <div class="box-traductor">
+        <div class="translator">
+        <div class="input-section">
+            <textarea id="inputText" placeholder="Escribe aquí tu mensaje"></textarea>
+            <button id="translateButton">TRADUCIR</button>
+        </div>
+
+        <div class="output-section">
+            <textarea id="outputText" placeholder="Traducción en Morse" readonly></textarea>
+            <div class="buttons">
+            <button id="playAudio">
+                <span>&#9658;</span> REPRODUCIR
+            </button>
+            <button id="saveMessage">
+                <span>&#9829;</span> GUARDAR
+            </button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
